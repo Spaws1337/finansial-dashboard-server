@@ -9,7 +9,7 @@ const PORT = process.env.PORT
 
 //HTTP Middleware (посредники)
 app.use(express.json())
-app.use(cors()) //app.use(cors({domain}))
+app.use(cors())
 
 //routes
 readdirSync('./routes').map((route) => app.use('/api/v1', require('./routes/' + route)))
